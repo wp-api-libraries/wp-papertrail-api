@@ -85,7 +85,7 @@ if ( ! class_exists( 'PapertrailAPI' ) ) {
 
 			$code = wp_remote_retrieve_response_code($response );
 			if ( 200 !== $code ) {
-				return new WP_Error( 'response-error', sprintf( __( 'Server response code: %d', 'wp-harvest-api' ), $code ) );
+				return new WP_Error( 'response-error', sprintf( __( 'Server response code: %d', 'wp-papertrail-api' ), $code ) );
 			}
 			$body = wp_remote_retrieve_body( $response );
 			return json_decode( $body );
